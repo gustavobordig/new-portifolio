@@ -39,3 +39,26 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ---------- Admin dashboard tokens ---------- */
+/* The admin area is dark-only, matching the site's committed look. */
+.admin-root {
+  color-scheme: dark;
+
+  --admin-bg: #030014;
+  --surface-1: #0b0620;
+  --surface-2: #120b2b;
+  --border-1: #241a45;
+  --text-primary: #ffffff;
+  --text-secondary: #b9b3d4;
+  --text-muted: #7a739b;
+
+  --series-1: #3987e5; /* categorical slot 1 — blue */
+  --series-2: #d95926; /* categorical slot 2 — orange */
+  --series-3: #199e70; /* categorical slot 3 — aqua */
+  --series-4: #c98500; /* categorical slot 4 — yellow */
+
+  --good: #0ca30c;
+  --critical: #d03b3b;
+  --grid: #1d1638;
+}

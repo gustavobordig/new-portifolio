@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import type { PropsWithChildren } from "react";
 
+import { AnalyticsTracker } from "@/components/analytics/tracker";
 import { Footer } from "@/components/main/footer";
 import { Navbar } from "@/components/main/navbar";
 import { StarsCanvas } from "@/components/main/star-background";
@@ -9,7 +10,7 @@ import { siteConfig } from "@/config";
 import { LanguageProvider } from "@/i18n/language-context";
 import { cn } from "@/lib/utils";
 
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           inter.className
         )}
       >
+        <AnalyticsTracker />
         <LanguageProvider>
           <StarsCanvas />
           <Navbar />
