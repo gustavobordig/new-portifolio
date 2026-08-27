@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import type { ProjectDownload } from "@/i18n/types";
+import { trackEvent } from "@/lib/analytics/client";
 
 type ProjectCardProps = {
   src: string;
@@ -60,6 +63,9 @@ export const ProjectCard = ({
               href={download.url}
               target="_blank"
               rel="noreferrer noopener"
+              onClick={() =>
+                trackEvent("download_click", `${title} · ${download.platform}`)
+              }
               className="button-primary inline-flex items-center gap-2 rounded-lg border border-[#7042f88b] px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
             >
               <AppleIcon />
